@@ -19,12 +19,12 @@ import javax.sql.DataSource;
  * @version 1.0.0
  * @date 2020/3/9 21:08
  */
-@MapperScan(basePackages = "com.freya.druid.multi.mapper.db1", sqlSessionTemplateRef  = "db1SqlSessionTemplate")
+@MapperScan(basePackages = "com.freya.druid.multi.mapper.db1", sqlSessionTemplateRef = "db1SqlSessionTemplate")
 public class DB1DatasourceConfig {
 	@Bean(name = "db1DataSource")
 	@ConfigurationProperties(prefix = "spring.datasource.druid.db1")
 	public DataSource dataSource() {
-		return  new DruidDataSource();
+		return new DruidDataSource();
 	}
 
 	@Bean(name = "db1SqlSessionFactory")
