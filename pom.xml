@@ -21,6 +21,7 @@
         <module>springboot-websocket</module>
         <module>springboot-redis-sentinel</module>
         <module>springboot-druid-single</module>
+        <module>springboot-druid-multi</module>
     </modules>
 
     <dependencies>
