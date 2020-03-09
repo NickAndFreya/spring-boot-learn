@@ -17,6 +17,10 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
+    <modules>
+        <module>springboot-websocket</module>
+        <module>springboot-redis-sentinel</module>
+    </modules>
 
     <dependencies>
         <dependency>
