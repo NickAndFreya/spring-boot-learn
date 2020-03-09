@@ -22,6 +22,7 @@
         <module>springboot-redis-sentinel</module>
         <module>springboot-druid-single</module>
         <module>springboot-druid-multi</module>
+        <module>springboot-mybatis-plus-multi-datasource</module>
     </modules>
 
     <dependencies>
