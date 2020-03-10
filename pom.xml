@@ -25,6 +25,7 @@
         <module>springboot-druid-multi</module>
         <module>springboot-mybatis-plus-multi-datasource</module>
         <module>springboot-swagger2</module>
+        <module>springboot-logback</module>
     </modules>
 
     <dependencies>
@@ -47,6 +48,12 @@
             <groupId>com.google.collections</groupId>
             <artifactId>google-collections</artifactId>
             <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
