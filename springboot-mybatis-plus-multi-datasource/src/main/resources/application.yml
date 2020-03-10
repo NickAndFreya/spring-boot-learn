@@ -80,7 +80,7 @@ spring:
           driver-class-name: com.mysql.jdbc.Driver
 #mybatis plus 设置
 mybatis-plus:
-  mapper-locations: classpath:mapper/*Mapper.xml
+  mapper-locations: classpath:/mapper/*Mapper.xml
   global-config:
     # 关闭MP3.0自带的banner
     banner: false
