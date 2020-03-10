@@ -1,0 +1,9 @@
+server:
+  port: 8040
+swagger:
+  production: false
+  basic:
+    enable: true
+    username: swagger2
+    password: swagger2
+
