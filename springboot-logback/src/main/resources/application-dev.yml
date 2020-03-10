@@ -1,0 +1,10 @@
+server:
+  port: 8070
+logging:
+  config: classpath:logback/logback-spring.xml #类路径指定
+#  config: logs/logback-spring.xml 这种情况下配置文件在可指定为所在服务器的目录
+  #  file: logs/log_xx_all.log 这种情况下写到项目下的logs目录
+  path: D:\logback\test
+  pattern: file=%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx
+  level:
+    root: debug
