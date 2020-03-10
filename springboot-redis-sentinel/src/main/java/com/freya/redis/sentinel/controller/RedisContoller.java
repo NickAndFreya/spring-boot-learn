@@ -1,6 +1,6 @@
 package com.freya.redis.sentinel.controller;
 
-import com.example.redissentinel.util.RedisUtil;
+import com.freya.redis.sentinel.util.RedisUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ import javax.annotation.Resource;
  * @date 2020/2/18 15:14
  */
 @RestController
-public class TestContoller {
+public class RedisContoller {
 
 	@Resource
 	private RedisUtil redisUtil;
