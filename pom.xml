@@ -23,7 +23,7 @@
         <module>springboot-redis-sentinel</module>
         <module>springboot-druid-single</module>
         <module>springboot-druid-multi</module>
-        <module>springboot-mybatis-plus-multi-datasource</module>
+        <module>springboot-mybatis-plus-dynamic-datasource</module>
         <module>springboot-swagger2</module>
         <module>springboot-logback</module>
     </modules>
