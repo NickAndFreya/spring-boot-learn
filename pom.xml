@@ -26,6 +26,7 @@
         <module>springboot-mybatis-plus-dynamic-datasource</module>
         <module>springboot-swagger2</module>
         <module>springboot-logback</module>
+        <module>springboot-hikaricp</module>
     </modules>
 
     <dependencies>
@@ -97,25 +98,7 @@
                     </nonFilteredFileExtensions>
                 </configuration>
             </plugin>
-            <!--<plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>-->
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                    <include>**/*.json</include>
-                    <include>**/*.ftl</include>
-                </includes>
-            </resource>
-        </resources>
     </build>
 
 </project>
