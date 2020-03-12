@@ -22,18 +22,15 @@ springboot-cache-redis  使用redis作为数据缓存
 
      @Cacheable:标注该方法或者类是支持缓存的
 	 
-	     @Cacheable可以标记在一个方法上，也可以标记在一个类上。
-		 
-		     当标记在一个方法上时表示该方法是支持缓存的，当标记在一个类上时则表示该类所有的方法都是支持缓存的。
-             如果一个方法上添加了@Cacheable标记，Spring会在其被调用后将其返回值缓存起来，
-		     以保证下次利用同样的参数来执行该方法时可以直接从缓存中获取结果，而不需要再次执行该方法。
+     @Cacheable可以标记在一个方法上，也可以标记在一个类上。
+ 	当标记在一个方法上时表示该方法是支持缓存的，当标记在一个类上时则表示该类所有的方法都是支持缓存的。
+             如果一个方法上添加了@Cacheable标记，Spring会在其被调用后将其返回值缓存起来，以保证下次利用同样的参数来执行该方法时可以直接从缓存中获取结果，而不需要再次执行该方法。
 
-	     @Cacheable可以指定三个属性，value、key和condition
-		     
-			 value：cacheNames，可以指定多个，用逗号隔开
-			 key：缓存的key，支持SpringEL表达式，#id或者#student.id
-			 condition:判定条件，符合条件的才会假如缓存
-			 例如：@Cacheable(value={"users"}, key="#user.id", condition="#user.id%2==0")
+	@Cacheable可以指定三个属性，value、key和condition
+		value：cacheNames，可以指定多个，用逗号隔开
+		key：缓存的key，支持SpringEL表达式，#id或者#student.id
+		condition:判定条件，符合条件的才会假如缓存
+		例如：@Cacheable(value={"users"}, key="#user.id", condition="#user.id%2==0")
 		  
      @CacheEvict:注解用来清除缓存
 	 
@@ -54,9 +51,7 @@ springboot-cache-redis  使用redis作为数据缓存
 	 
      @Caching:组合多个Cache注解使用
 	 
-	     在一个方法上面假如同时需要执行多个操作可以用这个进行注解组合。
-		 比如下面的一个例子：保存一个用户，之后可能查询的时候会根据id，username，email查询出对应的用户数据。
-		 那么就需要把这三个属性分别对应缓存数据保存起来。
+	     在一个方法上面假如同时需要执行多个操作可以用这个进行注解组合。比如下面的一个例子：保存一个用户，之后可能查询的时候会根据id，username，email查询出对应的用户数据。那么就需要把这三个属性分别对应缓存数据保存起来。
 	     @Caching(put = {
                 @CachePut(value = "user", key = "#user.id"),
                 @CachePut(value = "user", key = "#user.username"),
