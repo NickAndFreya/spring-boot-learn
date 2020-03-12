@@ -23,16 +23,14 @@ springboot-cache-redis  使用redis作为数据缓存
      @Cacheable:标注该方法或者类是支持缓存的
 	 
      @Cacheable可以标记在一个方法上，也可以标记在一个类上。
- 	当标记在一个方法上时表示该方法是支持缓存的，当标记在一个类上时则表示该类所有的方法都是支持缓存的。
-             如果一个方法上添加了@Cacheable标记，Spring会在其被调用后将其返回值缓存起来，以保证下次利用同样的参数来执行该方法时可以直接从缓存中获取结果，而不需要再次执行该方法。
-
-	@Cacheable可以指定三个属性，value、key和condition
+ 	当标记在一个方法上时表示该方法是支持缓存的，当标记在一个类上时则表示该类所有的方法都是支持缓存的。如果一个方法上添加了@Cacheable标记，Spring会在其被调用后将其返回值缓存起来，以保证下次利用同样的参数来执行该方法时可以直接从缓存中获取结果，而不需要再次执行该方法。
+	@Cacheable可以指定三个属性:
 		value：cacheNames，可以指定多个，用逗号隔开
 		key：缓存的key，支持SpringEL表达式，#id或者#student.id
 		condition:判定条件，符合条件的才会假如缓存
 		例如：@Cacheable(value={"users"}, key="#user.id", condition="#user.id%2==0")
 		  
-     @CacheEvict:注解用来清除缓存
+    @CacheEvict:注解用来清除缓存
 	 
 	    有以下五个属性：value，key，condition，allentries，beforeInvocation 
 		value，key，condition：同上
