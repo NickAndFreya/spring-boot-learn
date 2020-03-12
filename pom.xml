@@ -28,6 +28,7 @@
         <module>springboot-swagger2</module>
         <module>springboot-logback</module>
         <module>springboot-hikaricp</module>
+        <module>springboot-botain-system-config</module>
     </modules>
 
     <dependencies>
