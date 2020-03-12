@@ -1,4 +1,4 @@
-package com.freya.redis.sentinel.controller;
+package com.freya.redis.sentinel.controller.baseUtil;
 
 import com.freya.redis.sentinel.util.RedisUtil;
 import org.springframework.web.bind.annotation.GetMapping;
