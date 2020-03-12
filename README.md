@@ -9,6 +9,8 @@
 
 ### hikariCP
 
+### logback
+
 ###  mybatis-plus-dynamic-datasource
 
 ### redis-sentinel
