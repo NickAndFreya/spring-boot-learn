@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/3/13 0:17
  */
 @RestController
-@Api(tags = "Knife4j Test Restfull Controller")
+@Api(tags = "Group1's Apis")
 public class Knife4jTestController {
 
 	@GetMapping("/knife4j")
 	public String knife4jTest() {
-		return "Hello Knife4j!";
+		return "Hello Knife4j-1 !";
 	}
 }
