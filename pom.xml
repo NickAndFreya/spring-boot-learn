@@ -32,8 +32,7 @@
         <module>springboot-hikaricp</module>
         <module>springboot-botain-system-config</module>
         <module>springboot-knife4j</module>
-        <module>springboot-aop</module>
-        <module>springboot-jpa</module>
+        <module>springboot-quartzs</module>
     </modules>
 
     <dependencies>
@@ -57,12 +56,12 @@
             <artifactId>google-collections</artifactId>
             <version>1.0</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>

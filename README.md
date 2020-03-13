@@ -23,9 +23,7 @@
 
 ### knife4j
 
-### aop
-
-### jpa
+### quartz
 
 ## 遇到的问题
 
