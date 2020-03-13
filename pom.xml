@@ -32,6 +32,8 @@
         <module>springboot-hikaricp</module>
         <module>springboot-botain-system-config</module>
         <module>springboot-knife4j</module>
+        <module>springboot-aop</module>
+        <module>springboot-jpa</module>
     </modules>
 
     <dependencies>
