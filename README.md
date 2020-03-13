@@ -23,6 +23,10 @@
 
 ### knife4j
 
+### aop
+
+### jpa
+
 ## 遇到的问题
 
 ### springboot项目多模块打包是遇到的问题及解决方式[parent为pom项目，moudles为jar]
