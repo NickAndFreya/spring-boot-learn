@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.PostConstruct;
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -23,11 +26,24 @@ public class SystemConfigController {
 	@Autowired
 	private OpenIdProperties properties;
 
+
 	@Autowired
 	private FreyaDesc desc;
 
 	@Value("${freya.birthday}")
 	private String birthday;
+
+	@Autowired
+	private Properties serverProperties;
+
+
+	private Map<String, String> map = new HashMap<String, String>();
+
+	@PostConstruct
+	private void postConstruct() {
+		map.put("mother", serverProperties.getProperty("freya.name"));
+		map.put("son", serverProperties.getProperty("freya.son"));
+	}
 
 	@GetMapping("/getOpenId")
 	public String obtainSysConfig() {
@@ -54,5 +70,10 @@ public class SystemConfigController {
 	@GetMapping("/listener/{key}")
 	public String obtainFreyaDescs(@PathVariable(value = "key") String key) {
 		return PropertiesListenerConfig.getProperty(key);
+	}
+
+	@GetMapping("/getMap")
+	public Map<String, String> getMap() {
+		return map;
 	}
 }
