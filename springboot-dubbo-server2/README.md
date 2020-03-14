@@ -15,6 +15,8 @@
                <version>3.5.7</version>
            </dependency>
        zookeeper 服务为windows本地搭建的单体服务版本为3.5.7
+### 特别说明
+      springboot-dubbo-server1和springboot-dubbo-server2互为provider和consumer
 
 ### 过程中遇到的问题
     1、@Reference 属性 check 默认为true,启动服务时会检查zookeeper中是否有对应服务接口，如果服务接口还没注册到zookeeper中，启动报错，在服务提供方还没有将服务接口注册进zookeeper时，建议将check设为false；
