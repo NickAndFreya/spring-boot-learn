@@ -33,6 +33,9 @@
         <module>springboot-botain-system-config</module>
         <module>springboot-knife4j</module>
         <module>springboot-quartzs</module>
+        <module>springboot-dubbo-api</module>
+        <module>springboot-dubbo-server1</module>
+        <module>springboot-dubbo-server2</module>
     </modules>
 
     <dependencies>
