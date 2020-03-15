@@ -1,6 +1,7 @@
 # springboot-learning
 ## 介绍
-    Spring-boot version:2.0.4.RELEASE
+    该项目总结记录了我学习springboot集成各组件的demo,旨在记录学习过程，Spring-boot 版本采用2.0.4.RELEASE;
+    具体有哪些参考 标题【包含】的各个条目
 ## 包含
 
 ### druid-multi
