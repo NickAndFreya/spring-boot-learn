@@ -17,7 +17,6 @@
         <java.version>1.8</java.version>
         <druid.version>1.1.13</druid.version>
         <quartz.version>2.3.2</quartz.version>
-        <mybatis-plus.version>3.1.2</mybatis-plus.version>
     </properties>
 
     <dependencies>
@@ -44,13 +43,11 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${mybatis-plus.version}</version>
         </dependency>
         <!--alibaba druid-->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>${druid.version}</version>
+            <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
         <!--quartz相关依赖-->
         <dependency>
@@ -79,11 +76,7 @@
             <artifactId>commons-collections</artifactId>
             <version>3.2.1</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 
     <build>
