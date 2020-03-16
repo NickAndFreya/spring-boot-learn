@@ -36,6 +36,7 @@
         <module>springboot-dubbo-api</module>
         <module>springboot-dubbo-server1</module>
         <module>springboot-dubbo-server2</module>
+        <module>springboot-mybatis-dynamic-datasource</module>
     </modules>
 
     <dependencies>
