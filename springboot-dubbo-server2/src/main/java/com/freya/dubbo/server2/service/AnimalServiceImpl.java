@@ -1,9 +1,7 @@
-package com.freya.dubbo.server2.controller.service;
+package com.freya.dubbo.server2.service;
 
 import com.freya.dubbo.api.model.Animal;
-import com.freya.dubbo.api.model.Person;
 import com.freya.dubbo.api.service.AnimalService;
-import com.freya.dubbo.api.service.PersonService;
 import org.apache.dubbo.config.annotation.Service;
 
 /**
