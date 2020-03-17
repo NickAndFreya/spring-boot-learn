@@ -44,6 +44,7 @@
         <module>springboot-mybatis-dynamic-datasource</module>
         <module>springboot-exception</module>
         <module>springboot-sorting</module>
+        <module>springboot-bean-init-destroy</module>
     </modules>
 
     <dependencies>
