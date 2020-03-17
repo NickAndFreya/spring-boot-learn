@@ -32,6 +32,8 @@
 
 ### exception
 
+### sorting 
+
 ## 技巧经验总结
 ### 1、maven版本管理工具
         使用maven作为版本管理工具时，可以在parent module的pom中使用<dependencyManagement> 标签
