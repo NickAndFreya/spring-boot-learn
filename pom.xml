@@ -43,6 +43,7 @@
         <module>springboot-dubbo-server2</module>
         <module>springboot-mybatis-dynamic-datasource</module>
         <module>springboot-exception</module>
+        <module>springboot-sorting</module>
     </modules>
 
     <dependencies>
