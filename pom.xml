@@ -45,6 +45,7 @@
         <module>springboot-exception</module>
         <module>springboot-sorting</module>
         <module>springboot-bean-init-destroy</module>
+        <module>springboot-spring-data-jpa</module>
     </modules>
 
     <dependencies>
