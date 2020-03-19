@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动生成代码</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+
+<body>
+
+<form class="layui-form" action="" style="width: 40%;margin: auto;padding: 25px 10px 10px 10px;" lay-filter="formDemo">
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 100px;">项目路径:</label>
+        <div class="layui-input-block">
+            <input id="codePath" type="text" name="codePath" required lay-verify="required" placeholder="请输入代码存放路径" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 100px;">包父路径:</label>
+        <div class="layui-input-block">
+            <input id="packageParentPath" type="text" name="packageParentPath" required lay-verify="required" placeholder="请输入包父路径" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 100px;">包路径:</label>
+        <div class="layui-input-block">
+            <input id="packagePath" type="text" name="packagePath" required lay-verify="required" placeholder="请输入包路径" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 100px;">主键策略：</label>
+        <div class="layui-input-block">
+            <select id="keyStrategy" name="keyStrategy" lay-verify="required">
+                <option value=""></option>
+                <option value="keyAuto">主键自增</option>
+                <option value="snowId">雪花ID</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 100px;">选择表：</label>
+        <div class="layui-input-block">
+            <select id="tableName" name="tableName" lay-filter="tableSelect" lay-verify="" lay-search>
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+</form>
+
+<div id="table">
+    <div style="width: 60%;margin: auto;">
+        <table class="table table-bordered" style="text-align:center">
+            <thead>
+            <tr>
+                <th style="text-align:center">文件类型</th>
+                <th style="text-align:center">文件名</th>
+                <th style="text-align:center">是否创建</th>
+                <th style="text-align:center">是否覆盖</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><label class="layui-form-label" style="text-align: center;width: 100%;">Entity</label></td>
+                <td><input  type="text"  style="width:100%" class="layui-input"></td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="dtoCreated" lay-skin="switch" lay-text="ON|OFF" checked>
+                                </div>
+                            </div>
+                        </div>
+                </td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="dtoCover" lay-skin="switch" lay-text="ON|OFF">
+                                </div>
+                            </div>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="layui-form-label" style="text-align: center;width: 100%;">Controller</label></td>
+                <td><input id="controllerName" type="text"  style="width:100%" class="layui-input"></td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="controllerCreated" lay-skin="switch" lay-text="ON|OFF" checked>
+                                </div>
+                            </div>
+                        </div>
+                </td>
+                <td>
+                    <div class="layui-form">
+                        <div class="layui-form-item" style="margin-bottom: 0;">
+                            <div class="layui-input-block" style="margin: auto;">
+                                <input type="checkbox" name="controllerCover" lay-skin="switch" lay-text="ON|OFF">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="layui-form-label" style="text-align: center;width: 100%;">Mapper</label></td>
+                <td><input id="mapperName" type="text"  style="width:100%" class="layui-input"></td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="mapperCreated" lay-skin="switch" lay-text="ON|OFF" checked>
+                                </div>
+                            </div>
+                        </div>
+                </td>
+                <td>
+                    <div class="layui-form">
+                        <div class="layui-form-item" style="margin-bottom: 0;">
+                            <div class="layui-input-block" style="margin: auto;">
+                                <input type="checkbox" name="mapperCover" lay-skin="switch" lay-text="ON|OFF">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="layui-form-label" style="text-align: center;width: 100%;">MapperXml</label></td>
+                <td><input id="mapperXmlName" type="text"  style="width:100%" class="layui-input"></td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="mapperXmlCreated" lay-skin="switch" lay-text="ON|OFF" checked>
+                                </div>
+                            </div>
+                        </div>
+                </td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="mapperXmlCover" lay-skin="switch" lay-text="ON|OFF">
+                                </div>
+                            </div>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="layui-form-label" style="text-align: center;width: 100%;">Service</label></td>
+                <td><input id="serviceName" type="text"  style="width:100%" class="layui-input"></td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="serviceCreated" lay-skin="switch" lay-text="ON|OFF" checked>
+                                </div>
+                            </div>
+                        </div>
+                </td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="serviceCover" lay-skin="switch" lay-text="ON|OFF">
+                                </div>
+                            </div>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="layui-form-label" style="text-align: center;width: 100%;">Impl</label></td>
+                <td><input id="implName" type="text" style="width:100%" class="layui-input"></td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="implCreated" lay-skin="switch" lay-text="ON|OFF" checked>
+                                </div>
+                            </div>
+                        </div>
+                </td>
+                <td>
+                        <div class="layui-form">
+                            <div class="layui-form-item" style="margin-bottom: 0;">
+                                <div class="layui-input-block" style="margin: auto;">
+                                    <input type="checkbox" name="implCover" lay-skin="switch" lay-text="ON|OFF">
+                                </div>
+                            </div>
+                        </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--最后放置一个确定按钮-->
+<div style="text-align: center;">
+    <button class="layui-btn" onclick="generator()">generator</button>
+</div>
+
+
+
+
+</body>
+<script>
+
+    /**
+     * 只有执行了这一步，部分表单元素才会自动修饰成功
+     */
+    layui.use('form', function () {
+        var form = layui.form;
+        console.log("渲染表单");
+        form.render();
+        //下拉选选择事件
+        form.on('select(tableSelect)', function(data){
+            var tableName = data.value;
+            //var name = tableName.substring(tableName.indexOf("_") + 1);
+            var name = tableName.toLowerCase();
+            name = name.substring(0, 1).toUpperCase() + name.substring(1);
+            name = tocalme(name);
+            console.log("name = " + name);
+            //给所有的表单上面的数据进行赋值
+            var array = new Array();
+            array.push(name + ".java");
+            array.push(name + "Controller.java");
+            array.push(name + "Mapper.java");
+            array.push(name + "Mapper.xml");
+            array.push("I" + name + "Service.java");
+            array.push(name + "ServiceImpl.java");
+            console.log("" + $("#table").find("input[type='text']").length);
+            $("#table").find("input[type='text']").each(function (i) {
+                $(this).val(array[i]);
+                $(this).attr('disabled','disabled');
+            });
+        });
+    });
+
+    $(function () {
+        //发送请求后台获取数据加载表的数据
+        $.ajax({
+            type: 'GET',
+            url: "/listAllTableNames",
+            datatype: 'json',
+            success: function (data) {
+                $.each(data.result, function (index, item) {
+                    $("#tableName").append(new Option(item.tableName, item.tableName));
+                });
+                layui.form.render("select");
+            }, error: function () {
+                layer.msg('获取数据表名失败');
+            }
+        });
+    });
+
+
+    function tocalme(str) {
+        var re = /_(\w)/g;
+        return str.replace(re, function ($0, $1) {
+            return $1.toUpperCase();
+        });
+    }
+
+    /**
+     * 按钮点击事件
+     */
+    function generator() {
+        var tableName = $("#tableName").val();
+        var codePath = $("#codePath").val();
+        var packageParentPath = $("#packageParentPath").val();
+        var packagePath = $("#packagePath").val();
+        var keyStrategy = $("#keyStrategy").val();
+        if(codePath == null || codePath == ''){
+            layer.msg('项目的代码路径不能为空', {icon: 5});
+            return;
+        }
+        if(packageParentPath == null || packageParentPath == ''){
+            layer.msg('项目的父包名不能为空', {icon: 5});
+            return;
+        }
+        if(packagePath == null || packagePath == ''){
+            layer.msg('项目的包名不能为空', {icon: 5});
+            return;
+        }
+        if(tableName == null || tableName == ''){
+            layer.msg('请选择要生成的数据表', {icon: 5});
+            return;
+        }
+        if(keyStrategy == null || keyStrategy == ''){
+            layer.msg('主键生成策略不能为空', {icon: 5});
+            return;
+        }
+        var array = new Array();
+        $("input[type='checkbox']").each(function(i){
+            var currentJson = {
+                "name": $(this).attr('name'),
+                "checked": $(this).is(":checked")
+            };
+            array.push(currentJson);
+       });
+        //获取表单下拉选的值
+        var name = tableName.toLowerCase();
+        name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        name = tocalme(name);
+        //给所有的表单上面的数据进行赋值
+        var nameArray = new Array();
+        nameArray.push({
+            "name": "dtoName",
+            "value": name + ".java"
+        });
+        nameArray.push({
+            "name": "controllerName",
+            "value": name + "Controller.java"
+        });
+        nameArray.push({
+            "name": "mapperName",
+            "value": name + "Mapper.java"
+        });
+        nameArray.push({
+            "name": "mapperXmlName",
+            "value": name + "Mapper.xml"
+        });
+        nameArray.push({
+            "name": "serviceName",
+            "value": "I" + name + "Service.java"
+        });
+        nameArray.push({
+            "name": "implName",
+            "value": name + "ServiceImpl.java"
+        });
+
+        var requestJson = {
+            "nameArray": nameArray,
+            "checkBoxStatus":array,
+            "tableName": tableName,
+            "codePath": codePath,
+            "packageParentPath": packageParentPath,
+            "packagePath": packagePath,
+            "keyStrategy": keyStrategy
+        };
+        //发送请求后台获取数据加载表的数据
+        $.ajax({
+            type: 'POST',
+            url: "/generator",
+            data: JSON.stringify(requestJson),
+            contentType: "application/json; charset=utf-8",
+            datatype: 'json',
+            success: function (data) {
+                layer.msg('生成代码成功');
+            }, error: function () {
+                layer.msg('生成代码失败');
+            }
+        });
+    }
+</script>
+</html>
