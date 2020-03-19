@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Slf4j
-public class AnimalController {
+public class PersonController {
 
 	/**
 	 * version:接口的版本管理，可以通过这个对一个接口进行多版本控制
@@ -24,12 +24,12 @@ public class AnimalController {
 	 * timeout：接口的最大响应时间，消费端的优先级大于服务提供端的优先级
 	 * loadbalance：负载均衡模式，默认是随机模式
 	 */
-	@Reference(version = "${freya.server.version}",check = false,cluster = "failover",timeout = 5000,loadbalance = "random")
+	@Reference(version = "${freya.server.version}", check = false, cluster = "failover", timeout = 5000, loadbalance = "random")
 	private PersonService service;
 
 	@GetMapping("/person")
-	public Person get(){
-		log.info("Person:【{}】",service.obtainInfo().toString());
+	public Person get() {
+		log.info("Person:【{}】", service.obtainInfo().toString());
 		return service.obtainInfo();
 	}
 
