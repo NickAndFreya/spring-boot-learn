@@ -35,7 +35,7 @@
         <module>springboot-swagger2</module>
         <module>springboot-logback</module>
         <module>springboot-hikaricp</module>
-        <module>springboot-botain-system-config</module>
+        <module>springboot-obtain-system-config</module>
         <module>springboot-knife4j</module>
         <module>springboot-quartzs</module>
         <module>springboot-dubbo-api</module>
@@ -46,6 +46,7 @@
         <module>springboot-sorting</module>
         <module>springboot-bean-init-destroy</module>
         <module>springboot-spring-data-jpa</module>
+        <module>springboot-schedule</module>
     </modules>
 
     <dependencies>
