@@ -47,6 +47,7 @@
         <module>springboot-bean-init-destroy</module>
         <module>springboot-spring-data-jpa</module>
         <module>springboot-schedule</module>
+        <module>springboot-nc</module>
     </modules>
 
     <dependencies>
