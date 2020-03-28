@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+    <dimension name="time" length="720"/>
+    <dimension name="level" length="1"/>
+    <dimension name="lat" length="880"/>
+    <dimension name="lon" length="1050"/>
+    <attribute name="Description" value="rainfall"/>
+  
+    <attribute name="Author" value="Jeff"/>
+    <attribute name="Contacting" value="Meteorology Information Center:Guangdong"/>
+    <attribute name="Email" value="jeffkuo208@hotmail.com" />
+    <variable name="time" shape="time" type="int">
+        <values start="0" increment="1" />
+        <attribute name="units" value="hours since 2019-09-01 00:00:00"/>
+    </variable>
+    <variable name="tstr" shape="time" type="int">
+        <values start="0" increment="0"/>
+    </variable>
+    <variable name="level" shape="level" type="float">
+        <values>0.0f</values>
+		<attribute name="units" value="layer"/>
+    </variable>
+    <variable name="lstr" shape="level" type="int">
+        <values start="0" increment="0"/>
+    </variable>
+    <variable name="lat" shape="lat" type="float">
+        <values start="18.21" increment="0.01" />
+        <attribute name="units" value="degrees_north"/>
+    </variable>
+    <variable name="lon" shape="lon" type="float">
+        <values start="108.5" increment="0.01"/>
+        <attribute name="units" value="degrees_east"/>
+    </variable>
+    <variable name="rainfall" shape="time level lat lon" type="float">
+        <values start="0.00f" increment="0"/>  
+        <attribute name="units" value="mm"/>
+    </variable>
+</netcdf>
