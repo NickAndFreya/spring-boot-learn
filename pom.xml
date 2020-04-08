@@ -48,6 +48,7 @@
         <module>springboot-spring-data-jpa</module>
         <module>springboot-schedule</module>
         <module>springboot-nc</module>
+        <module>springboot-tree</module>
     </modules>
 
     <dependencies>
