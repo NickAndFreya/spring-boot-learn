@@ -1,4 +1,4 @@
-package com.freya.springboot.tree;
+package com.freya.springboot.tree.first;
 
 /**
  * @author chengpiny

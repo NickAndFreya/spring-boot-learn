@@ -2,7 +2,10 @@ package com.freya.springboot.tree;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SimplePropertyPreFilter;
-import org.springframework.boot.SpringApplication;
+import com.freya.springboot.tree.first.ITreeNode;
+import com.freya.springboot.tree.first.Org;
+import com.freya.springboot.tree.first.Tree;
+import com.freya.springboot.tree.first.TreeNode;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
