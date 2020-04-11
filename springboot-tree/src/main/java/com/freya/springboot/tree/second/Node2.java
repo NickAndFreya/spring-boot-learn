@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
-public class Node implements Serializable {
+public class Node2 implements Serializable {
 	private static final long serialVersionUID = -8430361738349058061L;
 
 	//主键
@@ -34,6 +35,8 @@ public class Node implements Serializable {
 	//节点所在层级
 	private Integer level;
 	//子节点
-	private List<Node> children;
+	private List<Node2> children;
+	//节点挂载资源
+	private LinkedHashSet<ResourceModel> resources;
 
 }

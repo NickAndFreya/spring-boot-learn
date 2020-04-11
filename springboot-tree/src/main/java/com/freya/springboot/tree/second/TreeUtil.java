@@ -26,7 +26,7 @@ public class TreeUtil {
 
 	public List<Node> buidTree() {
 		List<Node> treeNodes = new ArrayList<Node>();
-		List<Node> rootNodes = new ArrayList<Node>();
+		List<Node> rootNodes = getRootNodes();
 		for (Node rootNode : rootNodes) {
 			buildChildNodes(rootNode);
 			treeNodes.add(rootNode);
@@ -38,7 +38,7 @@ public class TreeUtil {
 	/**
 	 * 递归子节点
 	 */
-	public void buildChildNodes(Node node) {
+	private void buildChildNodes(Node node) {
 		List<Node> children = getChildNodes(node);
 		if (!children.isEmpty()) {
 			for (Node child : children) {
