@@ -14,8 +14,8 @@ spring:
       max-request-size: 10MB
   mail:
     host: smtp.163.com
-    username: longshine@163.com
-    password: Longshine@01
+    username: nick_1106@163.com
+    password: nick@01
     properties:
       mail:
         smtp:

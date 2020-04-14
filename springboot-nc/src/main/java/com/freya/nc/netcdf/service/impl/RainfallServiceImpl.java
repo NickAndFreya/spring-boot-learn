@@ -1,7 +1,4 @@
-/**
- * Longshine.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
+
 package com.freya.nc.netcdf.service.impl;
 
 import com.alibaba.fastjson.JSONObject;

@@ -8,7 +8,7 @@
   
     <attribute name="Author" value="Jeff" />
     <attribute name="Contacting" value="Meteorology Information Center:Guangdong" />
-    <attribute name="Email" value="yuanchengpin@longshine.com" />
+    <attribute name="Email" value="nick_1106@163.com" />
     <variable name="time" shape="time" type="int">
         <values start="0" increment="1" />
         <attribute name="units" value="hour since 2019-03-01 00:00:00" />

@@ -1,7 +1,4 @@
-/**
- * Longshine.com Inc.
- * Copyright (c) 2004-2018 All Rights Reserved.
- */
+
 package com.freya.nc.netcdf.service.impl;
 
 import com.freya.nc.common.result.ResponseEnum;

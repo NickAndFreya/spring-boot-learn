@@ -23,14 +23,14 @@ public class Swagger2Config {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(apiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.longshine.guangdong.netcdf.controller"))
+				.apis(RequestHandlerSelectors.basePackage("com.freya.nc.netcdf.controller"))
 				.paths(PathSelectors.any())
 				.build();
 	}
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
-				.title("广东省气象项目")
+				.title("NC项目")
 				.description("RESTful APIs")
 				.version("0.0.1")
 				.build();

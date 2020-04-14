@@ -1,5 +1,5 @@
 /**
- * Longshine.com Inc.
+ * freya.com Inc.
  * Copyright (c) 2004-2018 All Rights Reserved.
  */
 package com.freya.nc.common.ncutil;
