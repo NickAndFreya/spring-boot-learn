@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface PeopleService {
 	List<PeopleDto> getPeopleList();
+
+	PeopleDto save(PeopleDto dto);
 }

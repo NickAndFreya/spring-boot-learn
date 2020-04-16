@@ -4,4 +4,26 @@
     <select id="getPeopleList" resultType="com.freya.mybatis.dynamic.datasource.business.dto.PeopleDto">
         select * from people;
     </select>
+
+    <insert id="save" parameterType="com.freya.mybatis.dynamic.datasource.business.dto.PeopleDto">
+        insert into people
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+        </trim>
+
+    </insert>
+
 </mapper>

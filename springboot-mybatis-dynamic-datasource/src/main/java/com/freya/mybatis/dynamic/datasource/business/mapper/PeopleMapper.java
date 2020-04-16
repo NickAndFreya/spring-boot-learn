@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface PeopleMapper {
 	List<PeopleDto> getPeopleList();
+
+	void save(PeopleDto dto);
 }

@@ -15,7 +15,7 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PeopleDto {
-	private int id;
+	private Integer id;
 
 	private String title;
 }

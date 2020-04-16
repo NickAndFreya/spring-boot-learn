@@ -23,4 +23,11 @@ public class PeopleServiceImpl implements PeopleService {
 	public List<PeopleDto> getPeopleList() {
 		return mapper.getPeopleList();
 	}
+
+	@DS("db-slave")
+	@Override
+	public PeopleDto save(PeopleDto dto) {
+		mapper.save(dto);
+		return dto;
+	}
 }
