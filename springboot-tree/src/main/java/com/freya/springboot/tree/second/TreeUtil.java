@@ -2,6 +2,7 @@ package com.freya.springboot.tree.second;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author chengpiny
@@ -55,7 +56,7 @@ public class TreeUtil {
 	public List<Node> getChildNodes(Node pnode) {
 		List<Node> childNodes = new ArrayList<Node>();
 		for (Node n : nodes) {
-			if (pnode.getNodeId().equals(n.getParentId())) {
+			if (Objects.equals(pnode.getNodeId(), n.getParentId())) {
 				childNodes.add(n);
 			}
 		}
@@ -68,7 +69,7 @@ public class TreeUtil {
 	public boolean rootNode(Node node) {
 		boolean isRootNode = true;
 		for (Node n : nodes) {
-			if (node.getParentId() != null && node.getParentId().equals(n.getNodeId())) {
+			if (node.getParentId() != null && Objects.equals(node.getParentId(), n.getNodeId())) {
 				isRootNode = false;
 				break;
 			}

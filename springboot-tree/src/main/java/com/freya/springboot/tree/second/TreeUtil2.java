@@ -1,9 +1,6 @@
 package com.freya.springboot.tree.second;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author chengpiny
@@ -60,7 +57,7 @@ public class TreeUtil2 {
 	public List<Node2> getChildNodes(Node2 pnode) {
 		List<Node2> childNodes = new ArrayList<Node2>();
 		for (Node2 n : nodes) {
-			if (pnode.getNodeId().equals(n.getParentId())) {
+			if (Objects.equals(pnode.getNodeId(), n.getParentId())) {
 				childNodes.add(n);
 			}
 		}
@@ -68,7 +65,7 @@ public class TreeUtil2 {
 		for (Node2 n2 : childNodes) {
 			LinkedHashSet<ResourceModel> models = new LinkedHashSet<ResourceModel>();
 			for (ResourceModel model : mounts) {
-				if (n2.getNodeId() == model.getNodeId()) {
+				if (Objects.equals(n2.getNodeId(), model.getNodeId())) {
 					models.add(model);
 					n2.setResources(models);
 				}
@@ -83,7 +80,7 @@ public class TreeUtil2 {
 	public boolean rootNode(Node2 node) {
 		boolean isRootNode = true;
 		for (Node2 n : nodes) {
-			if (node.getParentId() != null && node.getParentId().equals(n.getNodeId())) {
+			if (node.getParentId() != null && Objects.equals(node.getParentId(), n.getNodeId())) {
 				isRootNode = false;
 				break;
 			}
