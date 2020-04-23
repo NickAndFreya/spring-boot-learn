@@ -11,7 +11,7 @@
     <groupId>com.freya</groupId>
     <artifactId>springboot-learning</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-learning</name>
+    <name>spring-boot-learn</name>
     <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
 
