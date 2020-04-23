@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.freya</groupId>
-    <artifactId>springboot-learning</artifactId>
+    <artifactId>spring-boot-learn</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-learn</name>
     <packaging>pom</packaging>
