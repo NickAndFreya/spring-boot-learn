@@ -50,6 +50,7 @@
         <module>springboot-schedule</module>
         <module>springboot-nc</module>
         <module>springboot-tree</module>
+        <module>springboot-mail</module>
     </modules>
 
     <dependencies>
