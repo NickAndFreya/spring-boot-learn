@@ -10,7 +10,7 @@
     <groupId>com.freya</groupId>
     <artifactId>springboot-jpa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-jpa</name>
+    <name>springboot-spring-data-jpa</name>
     <description>JPA project for Spring Boot</description>
 
     <properties>
