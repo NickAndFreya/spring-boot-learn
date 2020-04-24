@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.freya</groupId>
-    <artifactId>springboot-botain-system-config</artifactId>
+    <artifactId>springboot-obtain-system-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-obtain-system-config</name>
     <description>Demo project for Spring Boot</description>

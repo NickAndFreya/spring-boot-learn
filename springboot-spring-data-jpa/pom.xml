@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.freya</groupId>
-    <artifactId>springboot-jpa</artifactId>
+    <artifactId>springboot-spring-data-jpa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-spring-data-jpa</name>
     <description>JPA project for Spring Boot</description>

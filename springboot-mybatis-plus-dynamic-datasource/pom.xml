@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.freya</groupId>
-    <artifactId>springboot-mybatis-plus-multi-datasource</artifactId>
+    <artifactId>springboot-mybatis-plus-dynamic-datasource</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-mybatis-plus-multi-datasource</name>
     <description>Mybatis-plus multi project for Spring Boot</description>
