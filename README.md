@@ -1,46 +1,47 @@
 # springboot-learning
 ## 介绍
     该项目总结记录了我学习springboot集成各组件的demo,旨在记录学习过程，Spring-boot 版本采用2.0.4.RELEASE;
-    具体有哪些参考 标题【包含】的各个条目
-## 包含
+## modules
 
-### druid-multi
+### [druid-multi](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### druid-single
+### [druid-single](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### hikariCP
+### [hikariCP](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### logback
+### [logback](https://github.com/NickAndFreya/spring-boot-learn)  
 
-###  mybatis-plus-dynamic-datasource
+### [mybatis-plus-dynamic-datasource](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### redis-sentinel
+### [redis-sentinel](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### swagger2
+### [swagger2](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### websocket
+### [websocket](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### obtain-system-config
+### [obtain-system-config](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### knife4j
+### [knife4j](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### quartz
+### [quartz](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### dubbo
+### [dubbo](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### mybatis-dynamic-datasource
+### [mybatis-dynamic-datasource](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### exception
+### [exception](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### sorting 
+### [sorting](https://github.com/NickAndFreya/spring-boot-learn)   
 
-### bean-init-destroy
+### [bean-init-destroy](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### jpa
+### [springboot-jpa](https://github.com/NickAndFreya/spring-boot-learn)  
 
-### schedule
+### [springboot-schedule](https://github.com/NickAndFreya/spring-boot-learn)  
 
-## nc
+### [springboot-nc](https://github.com/NickAndFreya/spring-boot-learn)  
+
+### [springboot-mail](https://github.com/NickAndFreya/spring-boot-learn)
 
 ## 技巧经验总结
 ### 1、maven版本管理工具
