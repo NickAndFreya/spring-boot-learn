@@ -48,7 +48,7 @@
         使用maven作为版本管理工具时，可以在parent module的pom中使用<dependencyManagement> 标签
         统一管理子module相关组件的版本,dependencyManagement中定义的只是依赖的声明，并不实现引入，
         所以子项目需要显式的声明需要用的依赖且不用指定<version>。
-[参考博文1](https://blog.csdn.net/wo541075754/article/details/51490711?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)
+[参考博文1](https://blog.csdn.net/wo541075754/article/details/51490711?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)  
 [参考博文2](https://www.jianshu.com/p/e867ac845e11)
         
 
