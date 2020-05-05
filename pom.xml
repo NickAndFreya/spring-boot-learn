@@ -51,6 +51,7 @@
         <module>springboot-nc</module>
         <module>springboot-tree</module>
         <module>springboot-mail</module>
+        <module>springboot-design-patterns</module>
     </modules>
 
     <dependencies>
