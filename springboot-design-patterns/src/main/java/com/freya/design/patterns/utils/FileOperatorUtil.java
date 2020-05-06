@@ -8,17 +8,23 @@ import java.nio.BufferOverflowException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
 import org.jdesktop.swingx.util.OS;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Slf4j
 public class FileOperatorUtil {
+    //WINDOWS 换行符
+    private static final byte LINE_BREAK_WIN = 10;
+    //LINUX 换行符
+    private static final byte LINE_BREAK_LINUX = 13;
+    //空集合
+    private static final List<String> EMPTY_LIST = Collections.emptyList();
+
     public static void main(String[] args) {
-        List<String> list = FileOperatorUtil.readFileNioByLine("C:\\Users\\Administrator\\Desktop\\Z_SWAN_NMC_RADRIVERFLOOD_20200429164000.txt", ByteBuffer.allocate(3), 1024, "GBK");
+        List<String> list = FileOperatorUtil.readFileNioByLine("C:\\Users\\Administrator\\Desktop\\Z_SWAN_NMC_RADRIVERFLOOD_20200429164000.txt", ByteBuffer.allocate(3), 100, "GBK");
 
         for (String string : list) {
             System.out.println(string);
@@ -27,7 +33,6 @@ public class FileOperatorUtil {
 
     /**
      * 使用nio 实现按行读取文件(大文件)
-     *
      * @param filepath   文件路径
      * @param rbuffer    每次缓冲字符区的大小
      * @param maxnumline 最长行的字符个数
@@ -35,8 +40,9 @@ public class FileOperatorUtil {
      */
     public static List<String> readFileNioByLine(String filepath, ByteBuffer rbuffer, int maxnumline, String charset) {
         // 文件不存在或不是文件 返回null
+        List<String> emptyList = Collections.emptyList();
         if (!new File(filepath).exists() || !new File(filepath).isFile()) {
-            return null;
+            return EMPTY_LIST;
         }
         // 返回数据
         List<String> retStrList = new ArrayList<String>();
@@ -44,9 +50,9 @@ public class FileOperatorUtil {
             // 获取文件管道
             FileChannel fc = fis.getChannel();
             // 表示按行分割的标识 window:\r\n 13 10 linux/unix:\r 13 mac:\n 10
-            byte changeLine = 10;
+            byte changeLine = LINE_BREAK_WIN;
             if (OS.isLinux()) {
-                changeLine = 13;
+                changeLine = LINE_BREAK_LINUX;
             }
             // 换行符前面字符组合，可解决乱码
             ByteBuffer elseBuffer = ByteBuffer.allocate(maxnumline * 3);
@@ -85,7 +91,7 @@ public class FileOperatorUtil {
                         // 由于提前确定的字节缓冲区太小导致错误
                     } catch (BufferOverflowException e) {
                         log.error("the maxNumLine is too small:" + e.getMessage());
-                        return null;
+                        return EMPTY_LIST;
                     }
 
                 }
@@ -102,11 +108,15 @@ public class FileOperatorUtil {
             }
         } catch (FileNotFoundException e) {
             log.error("file not find:" + e.getMessage());
-            return null;
+            return EMPTY_LIST;
         } catch (IOException e) {
             log.error("read file by line error:" + e.getMessage());
-            return null;
+            return EMPTY_LIST;
         }
         return retStrList;
+    }
+
+    private FileOperatorUtil(){
+
     }
 }
