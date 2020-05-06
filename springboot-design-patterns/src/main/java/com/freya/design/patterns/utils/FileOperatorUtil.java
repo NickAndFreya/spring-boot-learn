@@ -39,7 +39,7 @@ public class FileOperatorUtil {
      * @return 每行数据的集合 发生异常返回null
      */
     public static List<String> readFileNioByLine(String filepath, ByteBuffer rbuffer, int maxnumline, String charset) {
-        // 文件不存在或不是文件 返回null
+        // 文件不存在或不是文件 返回空集合
         List<String> emptyList = Collections.emptyList();
         if (!new File(filepath).exists() || !new File(filepath).isFile()) {
             return EMPTY_LIST;
