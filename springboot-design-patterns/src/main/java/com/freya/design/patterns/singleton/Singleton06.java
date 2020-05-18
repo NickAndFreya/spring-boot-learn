@@ -7,7 +7,7 @@ package com.freya.design.patterns.singleton;
  * 推荐使用
  */
 public class Singleton06 {
-    private static volatile Singleton06 INSTANCE;
+    private static volatile Singleton06 INSTANCE;//volatile 防止指令重排
 
     private Singleton06 () {
     }
