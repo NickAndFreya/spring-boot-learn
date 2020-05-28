@@ -1,5 +1,6 @@
 package com.freya.springboot.schedule.schedule;
 
+import com.freya.springboot.schedule.utils.DateUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -15,23 +16,25 @@ import java.time.LocalDateTime;
 @Component
 @Slf4j
 public class Scheduler {
-	private static final LocalDateTime dateTime = LocalDateTime.now();
+    private static LocalDateTime dateTime = LocalDateTime.now();
 
-	private static final Instant instant = Instant.now();
+    private static Instant instant = Instant.now();
 
-	/***
-	 * 每隔2秒执行一次
-	 */
-	@Scheduled(fixedRate = 2000)
-	public void testTasks() {
-		log.info("固定频率定时任务执行时间:【{}】", instant);
-	}
+    /***
+     * 每隔10秒执行一次
+     */
+    @Scheduled(fixedRate = 10000)
+    public void testTasks() {
+		String day = DateUtil.getDayOfMonth();
 
-	/**
-	 * 每天10点50执行
-	 */
-	@Scheduled(cron = "0 50 10 ? * *")
-	public void testTask() {
-		log.info("CRON定时任务执行时间:【{}】", dateTime);
-	}
+        log.info("固定频率定时任务执行时间:[{}],Day Of Month is[{}]", instant,day);
+    }
+
+    /**
+     * 每天10点50执行
+     */
+    @Scheduled(cron = "0 50 10 ? * *")
+    public void testTask() {
+        log.info("CRON定时任务执行时间:【{}】", dateTime);
+    }
 }
