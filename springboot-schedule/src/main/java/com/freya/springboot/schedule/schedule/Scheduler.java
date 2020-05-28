@@ -6,6 +6,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
@@ -25,7 +26,7 @@ public class Scheduler {
      */
     @Scheduled(fixedRate = 10000)
     public void testTasks() {
-		String day = DateUtil.getDayOfMonth();
+		String day = DateUtil.getInstance().getDayOfMonth(LocalDate.now());
 
         log.info("固定频率定时任务执行时间:[{}],Day Of Month is[{}]", instant,day);
     }
