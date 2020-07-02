@@ -54,6 +54,7 @@
         <module>springboot-design-patterns</module>
         <module>springboot-jasperreport</module>
         <module>springboot-dataway</module>
+        <module>springboot-japi-docs</module>
     </modules>
 
     <dependencies>
