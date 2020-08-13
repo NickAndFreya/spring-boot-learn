@@ -76,6 +76,8 @@
     ① 在父级的pom中添加<packaging>pom</packaging> 标签
     ② 去掉或注释掉parent的<plugin><groupId>org.springframework.boot</groupId><artifactId>spring-boot-maven-plugin</artifactId></plugin>标签
     ③参考https://www.jianshu.com/p/37c6688c4fcb 
-    
-#### 新增 mapstruct 依赖 [参考文章](https://mp.weixin.qq.com/s/L_lMbHuU138NXAV7Sv8moA)
-#### 新增alibaba easyexcel 依赖
+## 常用工具  
+###  mapstruct  [参考文章](https://mp.weixin.qq.com/s/L_lMbHuU138NXAV7Sv8moA) [官方文档](https://mapstruct.org/documentation/stable/reference/html/)
+###  alibaba easyexcel [参考文档](https://www.yuque.com/easyexcel)
+###  hutool [参考文档](https://www.hutool.cn/docs/#/)
+###  guava [参考文档](http://ifeve.com/google-guava/)
