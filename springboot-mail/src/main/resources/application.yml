@@ -1,14 +1,14 @@
 spring:
   mail:
-    host: smtp.163.com #SMTP·şÎñÆ÷µØÖ·
-    username: nick_1106@163.com
-    password: PEMXXHHPQULMEIOA #µÇÂ½ÃÜÂë£¨»òÊÚÈ¨Âë£©
+    host: smtp.163.com #SMTPæœåŠ¡å™¨åœ°å€
+    username: nick_1106@163.com #ç™»å½•è´¦å·
+    password: PEMXXHHPQULMEIOA
     properties:
-      from: nick_1106@163.com #ÓÊ¼ş·¢ĞÅÈË£¨¼´ÕæÊµÓÊÏä£©
+      from: nick_1106@163.com #é‚®ä»¶å‘ä¿¡äºº(çœŸå®é‚®ç®±)
   thymeleaf:
     cache: false
     prefix: classpath:/views/
   servlet:
     multipart:
-      max-file-size: 10MB #ÏŞÖÆµ¥¸öÎÄ¼ş´óĞ¡
-      max-request-size: 50MB #ÏŞÖÆÇëÇó×ÜÁ¿
+      max-file-size: 10MB #é™åˆ¶å•ä¸ªæ–‡ä»¶å¤§å°
+      max-request-size: 50MB #é™åˆ¶è¯·æ±‚æ€»é‡
