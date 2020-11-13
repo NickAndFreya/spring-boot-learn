@@ -64,6 +64,7 @@
         <module>springboot-jdbc-data-jdbc</module>
         <module>springboot-ehcache</module>
         <module>springboot-easyecxel</module>
+        <module>springboot-java8-future</module>
     </modules>
 
     <dependencies>
