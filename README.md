@@ -62,6 +62,7 @@
 ### [springboot-easyexcel](https://github.com/NickAndFreya/spring-boot-learn)
 
 ### [springboot-java8future](https://github.com/NickAndFreya/spring-boot-learn)
+### [springboot-distributed-lock-zookeeper](https://github.com/NickAndFreya/spring-boot-learn)
 
 ## 技巧经验总结
 ### 1、maven版本管理工具

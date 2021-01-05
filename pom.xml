@@ -31,6 +31,7 @@
         <httpclient.version>4.5.6</httpclient.version>
         <ehcache.version>2.10.6</ehcache.version>
         <orika.version>1.4.2</orika.version>
+        <google.guava>29.0-jre</google.guava>
     </properties>
     <modules>
         <module>springboot-websocket</module>
@@ -66,6 +67,7 @@
         <module>springboot-ehcache</module>
         <module>springboot-easyecxel</module>
         <module>springboot-java8-future</module>
+        <module>springboot-distributed-lock-zookeeper</module>
     </modules>
 
     <dependencies>
@@ -113,12 +115,7 @@
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>29.0-jre</version>
-        </dependency>
+
 
         <!--对象信息打印依赖-->
         <dependency>
@@ -160,6 +157,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${google.guava}</version>
+        </dependency>-->
     </dependencies>
 
     <!--统一管理module依赖的库版本-->
