@@ -68,6 +68,7 @@
         <module>springboot-easyecxel</module>
         <module>springboot-java8-future</module>
         <module>springboot-distributed-lock-zookeeper</module>
+        <module>springboot-jacob</module>
     </modules>
 
     <dependencies>
